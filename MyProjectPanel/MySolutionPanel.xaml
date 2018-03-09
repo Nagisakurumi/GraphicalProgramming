@@ -1,0 +1,34 @@
+﻿<local:MyPanel x:Class="MyProjectPanel.MySolutionPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyProjectPanel"
+             xmlns:PorjectFiles="clr-namespace:MyProjectData;assembly=MyProjectData"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="MainUser">
+    <StackPanel Orientation="Vertical" Width="{Binding ElementName=MainUser,Path=Width}" Name="MainPanel">
+        <StackPanel Orientation="Horizontal" Width="{Binding ElementName=MainUser,Path=Width}" Height="39" >
+            <Image Width="50" Height="{Binding ElementName=MainPanel,Path=Height}" Stretch="Fill" Name="SolutionIcon"/>
+            <TextBlock Text="解决方案" Height="{Binding ElementName=MainPanel,Path=Height}" Width="249" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"></TextBlock>
+        </StackPanel>
+        <TreeView Name="SolutionTree" Height="244" Width="{Binding Path=Width, ElementName=MainPanel}" Background="#332C2C2C" Foreground="White">
+
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded}"></Setter>
+                    <Setter Property="IsSelected" Value="{Binding isSelected}"></Setter>
+                </Style>
+            </TreeView.ItemContainerStyle>
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate  ItemsSource="{Binding Path=ChildrenItem}">
+                    <!--<DataType="{x:Type local:MyXTreeItem}">-->
+                    <StackPanel Orientation="Horizontal">
+                        <Image VerticalAlignment="Center" Source="{Binding Icon}" Width="16" Height="16" Margin="0,0,2,2"></Image>
+                        <TextBlock VerticalAlignment="Center" Name="nodeName" Text="{Binding Name}" Foreground="White"></TextBlock>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+    </StackPanel>
+</local:MyPanel>

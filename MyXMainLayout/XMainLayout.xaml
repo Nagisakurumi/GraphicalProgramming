@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="MyXMainLayout.XMainLayout"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:avalon="http://schemas.xceed.com/wpf/xaml/avalondock"
+             xmlns:local="clr-namespace:MyXMainLayout"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" x:Name="munMenu">
+
+        </Menu>
+        <Grid Grid.Row="1">
+            <avalon:DockingManager x:Name="DockManager">
+                <avalon:DockingManager.Theme>
+                    <avalon:ExpressionDarkTheme/>
+                </avalon:DockingManager.Theme>
+
+                <avalon:LayoutRoot x:Name="Root">
+                    <avalon:LayoutPanel x:Name="Panel">
+
+                        <avalon:LayoutAnchorablePaneGroup x:Name="LeftAnchorableGroup" Orientation="Vertical" DockWidth="300">
+                            <avalon:LayoutAnchorablePane x:Name="LeftPane">
+                                <avalon:LayoutAnchorable x:Name="CodePic" Title="我的代码图" ContentId="Solution"/>
+                            </avalon:LayoutAnchorablePane>
+                        </avalon:LayoutAnchorablePaneGroup>
+
+
+                        <avalon:LayoutPanel  Orientation="Vertical"  >
+                            <avalon:LayoutDocumentPaneGroup Orientation="Horizontal">
+                                <avalon:LayoutDocumentPane   x:Name="ContentPanel">
+                                    <avalon:LayoutDocument Title="内容"></avalon:LayoutDocument>
+                                </avalon:LayoutDocumentPane>
+                            </avalon:LayoutDocumentPaneGroup>
+
+                            <avalon:LayoutAnchorablePaneGroup DockHeight="100"   Orientation="Horizontal"  >
+                                <avalon:LayoutAnchorablePane  >
+                                    <avalon:LayoutAnchorable Title="输出窗体" ></avalon:LayoutAnchorable>
+                                </avalon:LayoutAnchorablePane>
+                            </avalon:LayoutAnchorablePaneGroup>
+                        </avalon:LayoutPanel>
+
+
+                        <avalon:LayoutAnchorablePaneGroup x:Name="RightAnchorableGroup" Orientation="Vertical" DockWidth="300">
+                            <avalon:LayoutAnchorablePane x:Name="RightPane" >
+
+                            </avalon:LayoutAnchorablePane>
+                        </avalon:LayoutAnchorablePaneGroup>
+                    </avalon:LayoutPanel>
+
+                    <avalon:LayoutRoot.LeftSide>
+                        <avalon:LayoutAnchorSide>
+                            <avalon:LayoutAnchorGroup x:Name="LeftGroup">
+
+                            </avalon:LayoutAnchorGroup>
+                        </avalon:LayoutAnchorSide>
+                    </avalon:LayoutRoot.LeftSide>
+
+                    <avalon:LayoutRoot.RightSide>
+                        <avalon:LayoutAnchorSide>
+                            <avalon:LayoutAnchorGroup x:Name="RightGroup">
+
+                            </avalon:LayoutAnchorGroup>
+                        </avalon:LayoutAnchorSide>
+                    </avalon:LayoutRoot.RightSide>
+
+                    <avalon:LayoutRoot.TopSide>
+                        <avalon:LayoutAnchorSide>
+                            <avalon:LayoutAnchorGroup x:Name="TopGroup">
+
+                            </avalon:LayoutAnchorGroup>
+                        </avalon:LayoutAnchorSide>
+                    </avalon:LayoutRoot.TopSide>
+
+                    <avalon:LayoutRoot.BottomSide>
+                        <avalon:LayoutAnchorSide>
+                            <avalon:LayoutAnchorGroup x:Name="BottomGroup">
+
+                            </avalon:LayoutAnchorGroup>
+                        </avalon:LayoutAnchorSide>
+                    </avalon:LayoutRoot.BottomSide>
+                </avalon:LayoutRoot>
+            </avalon:DockingManager>
+        </Grid>
+    </Grid>
+</UserControl>

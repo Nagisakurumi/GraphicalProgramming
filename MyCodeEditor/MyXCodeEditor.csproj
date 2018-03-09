@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7D186D0-D95D-4617-BD2F-72456C96B647}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyXCodeEditor</RootNamespace>
+    <AssemblyName>MyXCodeEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeDestoryClass.cs" />
+    <Compile Include="DataWriteFunction.cs" />
+    <Compile Include="DecomposeClass.cs" />
+    <Compile Include="PicTransfromXmlFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateConfigFile.cs" />
+    <Compile Include="XPicCodeToCLanguagesCode.cs" />
+    <Compile Include="XPicCodeToCode.cs" />
+    <Compile Include="XPicCodeToCSharpCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyCodeBox\MyXCodeBox.csproj">
+      <Project>{1d4158f9-1264-4153-8ff2-d8919310fdfb}</Project>
+      <Name>MyXCodeBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPicTabPage\MyPicTabPage.csproj">
+      <Project>{740ae8bd-a031-4530-bf5e-e5f0003c1b2d}</Project>
+      <Name>MyPicTabPage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectData\MyProjectData.csproj">
+      <Project>{9cf53087-ebe5-47a8-9bf9-48ea5f62d2cd}</Project>
+      <Name>MyProjectData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyTabPage\MyTabPage.csproj">
+      <Project>{0a244cd3-bf24-46f6-983b-5834ef464569}</Project>
+      <Name>MyTabPage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyVectialPanel\MyVectialPanel.csproj">
+      <Project>{9f4efec9-78a2-4360-b39e-839eccf33758}</Project>
+      <Name>MyVectialPanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyXAribute\MyXAribute.csproj">
+      <Project>{da7386ad-4e24-4984-9746-cbf90d492fd6}</Project>
+      <Name>MyXAribute</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyXTreeView\MyXTreeView.csproj">
+      <Project>{66e5febb-2e44-44aa-8987-66ddef11238e}</Project>
+      <Name>MyXTreeView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XObject\MyXObject.csproj">
+      <Project>{f6a0bcfd-dcfe-42b2-804e-7c29a7a7f38e}</Project>
+      <Name>MyXObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

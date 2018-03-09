@@ -1,0 +1,95 @@
+﻿<Window x:Class="MyEditor.AddCodeBoxXml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyEditor"
+        xmlns:MyXAributeDataItem ="clr-namespace:MyXAributeDataItem;assembly=MyXAributeDataItem"
+        mc:Ignorable="d"
+        Title="添加可创建代码块" Height="872.429" Width="552.286" Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="button" Content="确认" Margin="0,0,160,10" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="96" Click="button_Click_1"/>
+        <Button x:Name="button_Copy" Content="关闭" Margin="0,0,15,10" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="101" Click="button_Copy_Click"/>
+        <TextBox x:Name="CodeBoxName" Margin="140,23,0,0" TextWrapping="Wrap" Text="name" HorizontalAlignment="Left" Width="120" Height="23" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock Text="代码块的名称" Height="30" Margin="0,20,409,791" FontSize="20"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,61,0,0" TextWrapping="Wrap" Text="类型" VerticalAlignment="Top" RenderTransformOrigin="-0.179,0.619" FontSize="20"/>
+        <ComboBox x:Name="FileType" HorizontalAlignment="Left" Margin="80,65,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="Xaribute" Margin="10,397,0,74" SelectionChanged="Xaribute_SelectionChanged" HorizontalAlignment="Left" Width="245">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected}"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type MyXAributeDataItem:XAributeDataItem}">
+                    <!--<Button Width="{Binding Path=Width,ElementName=Xaribute}" Click="Button_Click">-->
+                    <StackPanel Orientation="Horizontal" Width="{Binding Path=Width,ElementName=Xaribute}">
+                        <Image Source="{Binding Path=Icon}" />
+                        <TextBlock Text="{Binding Path=Name}"  FontSize="18" Background="#00000000" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <!--</Button>-->
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="10,371,0,0" TextWrapping="Wrap" Text="属性集合" VerticalAlignment="Top" RenderTransformOrigin="-0.179,0.619" FontSize="20"/>
+        <Button x:Name="button1" Content="添加" HorizontalAlignment="Left" Margin="10,0,0,10" Width="75" Click="button1_Click" Height="32" VerticalAlignment="Bottom"/>
+        <Button x:Name="button2" Content="删除" HorizontalAlignment="Left" Margin="91,0,0,10" Width="75" Height="32" VerticalAlignment="Bottom" Click="button2_Click"/>
+        <Border  BorderBrush="#FF060606" Height="{Binding Path=Height,ElementName=detial}" Margin="0,397,15,76" BorderThickness="1" HorizontalAlignment="Right" Width="241">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+
+            <StackPanel Orientation="Vertical" Name="detial" Margin="0,0,-1,-2">
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="参数名字" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <TextBox Name="ParamterType" Width="110" Height="30" TextChanged="ParamterType_TextChanged" FontSize="16"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="端口类型" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="PointType" Width="110" Height="30" SelectionChanged="PointType_SelectionChanged"></ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="数组类型" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="ListType" Width="110" Height="30" SelectionChanged="ListType_SelectionChanged"></ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="位置(输入输出)" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="PositionType" Width="110" Height="30" SelectionChanged="PositionType_SelectionChanged"></ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="连接方式" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <ComboBox Name="LinkType" Width="110" Height="30" SelectionChanged="LinkType_SelectionChanged"></ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="提示信息" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <TextBox Name="TipText" Width="110" Height="30" TextChanged="TipText_TextChanged" FontSize="16"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Width="{Binding Path=Width,ElementName=detial}">
+                    <TextBlock Text="类型名" Width="100" HorizontalAlignment="Right" FontSize="15" FontFamily="Ravie"  VerticalAlignment="Center"></TextBlock>
+                    <TextBox Name="LastExText" Width="110" Height="30" TextChanged="LastExText_TextChanged" FontSize="16"></TextBox>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Right" Margin="0,353,196,0" TextWrapping="Wrap" Text="细节" Height="39" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,116,0,0" TextWrapping="Wrap" Text="提示" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="HitText" HorizontalAlignment="Left" Height="82" Margin="68,91,0,0" TextWrapping="Wrap" Text="用于提示&#xD;&#xA;" VerticalAlignment="Top" Width="214" FontSize="16"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Right" Margin="0,19,-1,0" TextWrapping="Wrap" Text="系统代码(编译时候使用)：" VerticalAlignment="Top" FontSize="24" Height="67" Width="240"/>
+        <RichTextBox x:Name="SystemCodeString" Height="257" Margin="0,91,15,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="224">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="10,246,0,0" TextWrapping="Wrap" Text="ReturnValue" VerticalAlignment="Top" RenderTransformOrigin="-0.4,0" FontSize="16"/>
+        <RichTextBox x:Name="ReturnValue" HorizontalAlignment="Left" Height="143" Margin="121,234,0,0"  VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="CodeBoxType" Width="161" Margin="121,178,0,0" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock Text="代码块类型" Height="30" Margin="4,187,428,624" FontSize="20"/>
+    </Grid>
+</Window>

@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="MyXToolsPanel.ColorSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyXToolsPanel"
+             mc:Ignorable="d" 
+             Height="376.142" Width="648" Background="AliceBlue">
+    <Grid Background="#FFB0B0B0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136*" />
+            <ColumnDefinition Width="490*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="184*" />
+            <RowDefinition Height="187*" />
+        </Grid.RowDefinitions>
+        <Path Visibility="Hidden" x:Name="Triangle" Data="M 0,5 L 10,0 10,10 Z" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Canvas Height="371" HorizontalAlignment="Left" Name="PanelLeft" VerticalAlignment="Top" Width="317" Grid.RowSpan="2" OpacityMask="{x:Null}" Grid.ColumnSpan="2">
+            <Rectangle Canvas.Left="10" Canvas.Top="39" Height="20" Name="rectangle1" Stroke="#FF332E2E" Width="30" Fill="Red" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="55" Canvas.Top="39" Height="20" Name="rectangle2" Stroke="#FF332E2E" Width="30" Fill="Yellow" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="100" Canvas.Top="39" Height="20" Name="rectangle3" Stroke="#FF332E2E" Width="30" Fill="Magenta" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="145" Canvas.Top="39" Height="20" Name="rectangle4" Stroke="#FF332E2E" Width="30" Fill="Cyan" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="190" Canvas.Top="39" Height="20" Name="rectangle5" Stroke="#FF332E2E" Width="30" Fill="Lime" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="235" Canvas.Top="39" Height="20" Name="rectangle6" Stroke="#FF332E2E" Width="30" Fill="Blue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="280" Canvas.Top="39" Height="20" Name="rectangle7" Stroke="#FF332E2E" Width="30" Fill="RosyBrown" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="10" Canvas.Top="74" Height="20" Name="rectangle8" Stroke="#FF332E2E" Width="30" Fill="AliceBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="55" Canvas.Top="74" Height="20" Name="rectangle9" Stroke="#FF332E2E" Width="30" Fill="Silver" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="100" Canvas.Top="74" Height="20" Name="rectangle10" Stroke="#FF332E2E" Width="30" Fill="Turquoise" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="145" Canvas.Top="74" Height="20" Name="rectangle11" Stroke="#FF332E2E" Width="30" Fill="SkyBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="190" Canvas.Top="74" Height="20" Name="rectangle12" Stroke="#FF332E2E" Width="30" Fill="Wheat" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="235" Canvas.Top="74" Height="20" Name="rectangle13" Stroke="#FF332E2E" Width="30" Fill="Linen" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="280" Canvas.Top="74" Height="20" Name="rectangle14" Stroke="#FF332E2E" Width="30" Fill="DarkOrange" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="10" Canvas.Top="108" Height="20" Name="rectangle15" Stroke="#FF332E2E" Width="30" Fill="Aquamarine" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="55" Canvas.Top="108" Height="20" Name="rectangle16" Stroke="#FF332E2E" Width="30" Fill="DeepPink" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="100" Canvas.Top="108" Height="20" Name="rectangle17" Stroke="#FF332E2E" Width="30" Fill="BlueViolet" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="145" Canvas.Top="108" Height="20" Name="rectangle18" Stroke="#FF332E2E" Width="30" Fill="Azure" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="190" Canvas.Top="108" Height="20" Name="rectangle19" Stroke="#FF332E2E" Width="30" Fill="Brown" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="235" Canvas.Top="108" Height="20" Name="rectangle20" Stroke="#FF332E2E" Width="30" Fill="SteelBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="280" Canvas.Top="108" Height="20" Name="rectangle21" Stroke="#FF332E2E" Width="30" Fill="SlateBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="10" Canvas.Top="142" Height="20" Name="rectangle22" Stroke="#FF332E2E" Width="30" Fill="DarkGray" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="55" Canvas.Top="142" Height="20" Name="rectangle23" Stroke="#FF332E2E" Width="30" Fill="SeaShell" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="100" Canvas.Top="142" Height="20" Name="rectangle24" Stroke="#FF332E2E" Width="30" Fill="DarkKhaki" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="145" Canvas.Top="142" Height="20" Name="rectangle25" Stroke="#FF332E2E" Width="30" Fill="Chartreuse" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="190" Canvas.Top="142" Height="20" Name="rectangle26" Stroke="#FF332E2E" Width="30" Fill="CornflowerBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="235" Canvas.Top="142" Height="20" Name="rectangle27" Stroke="#FF332E2E" Width="30" Fill="Gold" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="280" Canvas.Top="142" Height="20" Name="rectangle28" Stroke="#FF332E2E" Width="30" Fill="HotPink" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="10" Canvas.Top="177" Height="20" Name="rectangle29" Stroke="#FF332E2E" Width="30" Fill="IndianRed" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="55" Canvas.Top="177" Height="20" Name="rectangle30" Stroke="#FF332E2E" Width="30" Fill="SeaGreen" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="100" Canvas.Top="177" Height="20" Name="rectangle31" Stroke="#FF332E2E" Width="30" Fill="YellowGreen" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="145" Canvas.Top="177" Height="20" Name="rectangle32" Stroke="#FF332E2E" Width="30" Fill="Snow" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="190" Canvas.Top="177" Height="20" Name="rectangle33" Stroke="#FF332E2E" Width="30" Fill="Cornsilk" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="235" Canvas.Top="177" Height="20" Name="rectangle34" Stroke="#FF332E2E" Width="30" Fill="#FFFFA1DC" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="280" Canvas.Top="177" Height="20" Name="rectangle35" Stroke="#FF332E2E" Width="30" Fill="RoyalBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="10" Canvas.Top="211" Height="20" Name="rectangle36" Stroke="#FF332E2E" Width="30" Fill="White" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="55" Canvas.Top="211" Height="20" Name="rectangle37" Stroke="#FF332E2E" Width="30" Fill="Black" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="100" Canvas.Top="211" Height="20" Name="rectangle38" Stroke="#FF332E2E" Width="30" Fill="DeepSkyBlue" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="145" Canvas.Top="211" Height="20" Name="rectangle39" Stroke="#FF332E2E" Width="30" Fill="Teal" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="190" Canvas.Top="211" Height="20" Name="rectangle40" Stroke="#FF332E2E" Width="30" Fill="Chocolate" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="235" Canvas.Top="211" Height="20" Name="rectangle41" Stroke="#FF332E2E" Width="30" Fill="Tomato" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <Rectangle Canvas.Left="280" Canvas.Top="211" Height="20" Name="rectangle42" Stroke="#FF332E2E" Width="30" Fill="LightYellow" MouseDown="rectangle42_MouseDown" OpacityMask="Black" StrokeThickness="1" />
+            <TextBlock Canvas.Left="10" Canvas.Top="10" Height="23" Name="textBlock10" Text="基本颜色：" Foreground="Black" FontSize="22" FontFamily="华文彩云" />
+            <Rectangle Name="ColorShow" Width="84" Fill="{x:Null}" Canvas.Left="166" Canvas.Top="255" Height="54" Stroke="Black" StrokeThickness="3" />
+            <TextBlock Height="36" Name="textBlock1" Text="最终颜色：" Canvas.Left="24" Canvas.Top="266" FontSize="24" Width="123" FontFamily="华文彩云"></TextBlock>
+            <Button Canvas.Left="41" Canvas.Top="332" Content="确定" Height="23" Name="button1" Width="75" Click="button1_Click" Background="#FF8B8B8B">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button Canvas.Left="190" Canvas.Top="332" Content="取消" Height="23" Name="button2" Width="75" Click="button2_Click" Background="#FFC3B418">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Canvas>
+        <Canvas Height="371" HorizontalAlignment="Right" Name="PanelRight" VerticalAlignment="Top" Width="295" Grid.RowSpan="2" Grid.Column="1">
+
+            <TextBlock Canvas.Left="75" Canvas.Top="266" Height="23" Name="textBlock7" Text="R" Foreground="Red" />
+            <TextBlock Canvas.Left="130" Canvas.Top="266" Height="23" Name="textBlock8" Text="G" Foreground="Green" />
+            <TextBlock Canvas.Left="190" Canvas.Top="266" Height="23" Name="textBlock9" Text="B" Foreground="Blue" />
+            <TextBlock Canvas.Left="255" Canvas.Top="266" Height="23" Name="textBlock6" Text="A" Foreground="Black" />
+            <TextBlock Height="23" Name="textBlock2" Text="透明底(A)" Foreground="#FF0D0D0E" Canvas.Left="132" Canvas.Top="331" />
+            <TextBlock Height="23" Name="textBlock5" Text="蓝(U)" Foreground="#FF0606E9" Canvas.Left="35" Canvas.Top="331" />
+            <TextBox Height="25" Name="textBoxBrightness" Width="40" Text="255" FontSize="16" Canvas.Left="202" Canvas.Top="329" TextChanged="textBox_TextChanged" Background="#FFA4A4A4" />
+            <TextBox Height="25" Name="textBoxBlue" Width="40" Text="0" FontSize="16" Canvas.Left="87" Canvas.Top="329" TextChanged="textBox_TextChanged" Background="#FFA4A4A4"/>
+            <TextBlock Height="23" Name="textBlock3" Text="红(R)" Foreground="#FFFF3B01" Canvas.Left="35" Canvas.Top="295" RenderTransformOrigin="-0.886,0.526" />
+            <TextBlock Height="23" Name="textBlock4" Text="绿(G)" Foreground="#FF00F95B" Canvas.Left="132" Canvas.Top="295" RenderTransformOrigin="0.891,0.662" />
+            <TextBox Height="25" Name="textBoxRed" Width="40" Text="0" FontSize="16" Canvas.Left="87" Canvas.Top="290" TextChanged="textBox_TextChanged" Background="#FFA4A4A4" />
+            <TextBox Height="25" Name="textBoxGreen" Width="40" Text="0" FontSize="16" Canvas.Left="202" Canvas.Top="290" TextChanged="textBox_TextChanged" Background="#FFA4A4A4"/>
+
+            <Canvas Canvas.Right="20" Canvas.Top="5" Height="256" MouseDown="Setting_MouseDown" Name="BrightSetting" Width="30">
+                <Image Canvas.Left="0" Canvas.Top="0" Height="256" Name="imageBright" Stretch="Fill" Width="30" Margin="0" />
+            </Canvas>
+            <Canvas Canvas.Right="0" Canvas.Top="0" Height="269" Name="SetBrightPanel" Width="15">
+                <Canvas Canvas.Right="0" Height="20" Name="SetBright" Width="15"  Margin="0,0,0,0" VerticalAlignment="Top" >
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFEBEBEB" Offset="0.02" />
+                            <GradientStop Color="#FF2D2F34" Offset="0.351" />
+                            <GradientStop Color="#FFEBEBEB" Offset="0.059" />
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+            </Canvas>
+
+            <Canvas Canvas.Left="60" Canvas.Top="5" Height="256" MouseDown="Setting_MouseDown" Name="RedSetting" Width="30" Background="{x:Null}">
+                <Image Canvas.Left="0" Canvas.Top="0" Height="256" Name="imageRed" Stretch="Fill" Width="30" Margin="0" OpacityMask="{x:Null}" />
+            </Canvas>
+            <Canvas Canvas.Left="95" Canvas.Top="0" Height="269" Name="SetRedPanel" Width="15">
+                <Canvas Canvas.Right="0"  Height="20" Name="SetRed" Width="15"  VerticalAlignment="Top" >
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF5338" Offset="0" />
+                            <GradientStop Color="#FF90A6EF" Offset="1" />
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+            </Canvas>
+
+            <Canvas Canvas.Left="120" Canvas.Top="5" Height="256" MouseDown="Setting_MouseDown" Name="GreenSetting" Width="30">
+                <Image Canvas.Left="0" Canvas.Top="0" Height="256" Name="imageGreen" Stretch="Fill" Width="30" Margin="0" />
+            </Canvas>
+            <Canvas Canvas.Left="155" Canvas.Top="0" Height="269" Name="SetGreenPanel" Width="15">
+                <Canvas Canvas.Right="0"  Height="20" Name="SetGreen" Width="15"  Margin="0,0,0,0" VerticalAlignment="Top" >
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF54F823" Offset="0" />
+                            <GradientStop Color="#FF90A6EF" Offset="1" />
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+            </Canvas>
+
+            <Canvas Canvas.Left="180" Canvas.Top="5" Height="256" MouseDown="Setting_MouseDown" Name="BlueSetting" Width="30">
+                <Image Canvas.Left="0" Canvas.Top="0" Height="256" Name="imageBlue" Stretch="Fill" Width="30" Margin="0" />
+            </Canvas>
+            <Canvas Canvas.Left="215" Canvas.Top="0" Height="269" Name="SetBluePanel" Width="15">
+                <Canvas Canvas.Right="0"  Height="20" Name="SetBlue" Width="15"  Margin="0,0,0,0" VerticalAlignment="Top" >
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF6BF5F5" Offset="0" />
+                            <GradientStop Color="#FF1349FC" Offset="1" />
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+            </Canvas>
+            <Canvas Canvas.Left="0" Canvas.Top="5" Height="240" Name="AllSetting" MouseDown="Setting_MouseDown" Width="30" Background="{x:Null}">
+                <Image Canvas.Left="0" Canvas.Top="0" Height="240" Name="imageAll" Stretch="Fill" Width="30" Margin="0" OpacityMask="{x:Null}" />
+            </Canvas>
+            <Canvas  Canvas.Left="35" Height="269" Name="AllSetPanel" Width="15"  HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}">
+                <Canvas Canvas.Right="0" Height="20" Margin="0,0,0,0" Name="SetAll" VerticalAlignment="Top" Width="15">
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF140F11" Offset="0.156" />
+                            <GradientStop Color="#FFEFA657" Offset="1" />
+                            <GradientStop Color="#FF21211D" Offset="1" />
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+            </Canvas>
+        </Canvas>
+    </Grid>
+</UserControl>

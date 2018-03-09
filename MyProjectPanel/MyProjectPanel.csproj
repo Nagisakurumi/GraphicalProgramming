@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45DDBC14-57FE-4A42-8B06-7FEB9F32328E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyProjectPanel</RootNamespace>
+    <AssemblyName>MyProjectPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyFunctionPanel.xaml.cs">
+      <DependentUpon>MyFunctionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyPanel.cs" />
+    <Compile Include="MyProjectDllFilePanel.xaml.cs">
+      <DependentUpon>MyProjectDllFilePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MySolutionPanel.xaml.cs">
+      <DependentUpon>MySolutionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyXAributePanel.xaml.cs">
+      <DependentUpon>MyXAributePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyXAributePropertiesPanel.xaml.cs">
+      <DependentUpon>MyXAributePropertiesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MyFunctionPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyProjectDllFilePanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MySolutionPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyXAributePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyXAributePropertiesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyPicTabPage\MyPicTabPage.csproj">
+      <Project>{740ae8bd-a031-4530-bf5e-e5f0003c1b2d}</Project>
+      <Name>MyPicTabPage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectClassData\MyProjectClassData.csproj">
+      <Project>{6a153b4f-34aa-4cb5-a5ed-d0151e1143ea}</Project>
+      <Name>MyProjectClassData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectData\MyProjectData.csproj">
+      <Project>{9cf53087-ebe5-47a8-9bf9-48ea5f62d2cd}</Project>
+      <Name>MyProjectData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyTabPage\MyTabPage.csproj">
+      <Project>{0A244CD3-BF24-46F6-983B-5834EF464569}</Project>
+      <Name>MyTabPage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyXAribute\MyXAribute.csproj">
+      <Project>{da7386ad-4e24-4984-9746-cbf90d492fd6}</Project>
+      <Name>MyXAribute</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XObject\MyXObject.csproj">
+      <Project>{f6a0bcfd-dcfe-42b2-804e-7c29a7a7f38e}</Project>
+      <Name>MyXObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
